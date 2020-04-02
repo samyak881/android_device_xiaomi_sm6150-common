@@ -326,6 +326,9 @@ on boot
 
     setprop ro.telephony.call_ring.multiple false
 
+    #enable camera read sensors data
+    setprop persist.camera.gyro.disable 0
+
     # Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 
@@ -725,6 +728,7 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user system
     group system
+    disabled
 
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
@@ -780,6 +784,11 @@ service loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
+
+service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
+    class core
+    user root
+    oneshot
 
 on property:sys.boot_completed=1
     # Let kernel know our image version/variant/crm_version
