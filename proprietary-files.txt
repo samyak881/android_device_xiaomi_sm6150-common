@@ -607,7 +607,7 @@ product/etc/permissions/telephonyservice.xml
 product/framework/QtiTelephonyServicelibrary.jar
 product/framework/embmslibrary.jar
 product/framework/qcrilhook.jar
-product/framework/qti-telephony-common.jar
+product/framework/qti-telephony-common.jar|411e1eda313b38205dd89a012d898f74e2ddaee0
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/hw/qcrild
 vendor/bin/netmgrd
@@ -710,7 +710,7 @@ product/lib64/vendor.qti.ims.callinfo@1.0.so
 product/lib64/vendor.qti.ims.rcsconfig@1.0.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
--product/priv-app/ims/ims.apk
+-product/priv-app/ims/ims.apk|82c21146e0a5156493e2c7ef20275d8d98647b35
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
