@@ -785,6 +785,12 @@ service loc_launcher /vendor/bin/loc_launcher
     user gps
     group gps
 
+service qcom-sh /vendor/bin/init.qcom.sh
+    class late_start
+    user root
+    group root system radio
+    oneshot
+
 service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
     class core
     user root
@@ -819,6 +825,12 @@ service time_daemon /vendor/bin/time_daemon
     user system
     group system
     capabilities SYS_TIME
+
+service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
+    class core
+    user root
+    group root
+    disabled
 
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*

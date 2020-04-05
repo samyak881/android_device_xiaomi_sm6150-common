@@ -248,6 +248,10 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# IRQ Balance
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
@@ -317,6 +321,7 @@ PRODUCT_PACKAGES += \
     init.msm.usb.configfs.rc \
     init.power.rc \
     init.qcom.rc \
+    init.qcom.sh \
     init.qcom.sensors.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
