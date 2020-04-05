@@ -208,20 +208,23 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsi.so
 vendor/lib64/libssd.so
 vendor/lib/libQSEEComAPI.so
-vendor/lib/libcpion.so
 vendor/lib/libdrmfs.so
 
 # DRM - Widevine
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 vendor/lib64/libbase64.so
-vendor/lib64/libcpion.so
+vendor/lib64/liboemcrypto.so
 vendor/lib64/librmp.so
+vendor/lib64/libwvkeybox.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib/libbase64.so
+vendor/lib/libcpion.so
 vendor/lib/libcppf.so
 vendor/lib/libdrmfs.so
+vendor/lib/liboemcrypto.so
 vendor/lib/librmp.so
+vendor/lib/libwvkeybox.so
 vendor/lib/libwvhidl.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
@@ -398,7 +401,6 @@ vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib/libdpps.so
 vendor/lib/libqseed3.so
@@ -406,7 +408,6 @@ vendor/lib/libsdm-color.so
 vendor/lib/libsdm-colormgr-algo.so
 vendor/lib/libsdm-diag.so
 vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmextension.so
 vendor/lib/libtinyxml2_1.so
 
 # Graphics (Vulkan)
@@ -452,6 +453,7 @@ vendor/lib64/libgcs.so
 vendor/lib64/liblistensoundmodel2.so
 
 # Media
+vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice.rc
 vendor/lib64/libAlacSwDec.so
