@@ -34,6 +34,7 @@ vendor/lib/rfsa/adsp/libdirac-capiv2.so
 
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
+product/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -45,8 +46,6 @@ vendor/lib/vendor.qti.hardware.alarm@1.0.so
 # ANT+
 -lib64/libantradio.so
 -lib/libantradio.so
-product/lib64/com.qualcomm.qti.ant@1.0.so
-product/lib/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib/com.qualcomm.qti.ant@1.0.so
@@ -166,6 +165,7 @@ vendor/lib64/vendor.qti.hardware.factory@1.1.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
 # ConfigStore
+product/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
@@ -185,7 +185,7 @@ product/etc/permissions/dpmapi.xml
 product/framework/com.qti.dpmframework.jar
 product/framework/dpmapi.jar
 product/lib64/com.qualcomm.qti.dpm.api@1.0.so
-lib64/libdiag_system.so
+lib64/libdiag_system.so	
 product/lib64/libdpmctmgr.so
 product/lib64/libdpmfdmgr.so
 product/lib64/libdpmframework.so
@@ -536,6 +536,15 @@ vendor/lib64/libmlipay.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 
+# Neural networks
+vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
+vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
+vendor/lib64/libhexagon_nn_stub.so
+vendor/lib64/unnhal-acc-adreno.so
+vendor/lib64/unnhal-acc-common.so
+vendor/lib64/unnhal-acc-hvx.so
+vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
+
 # Perf
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/vendor.qti.hardware.perf@2.0.so
@@ -599,9 +608,9 @@ vendor/lib/libqmiservices.so
 # Qualcomm Trusted Execution Environment
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
-vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/libGPQTEEC_vendor.so
+vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
@@ -760,8 +769,13 @@ vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 
 # Sensors
+product/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
+vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml:product/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/bin/sensors.qti
 vendor/etc/sensors/hals.conf
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
@@ -774,6 +788,8 @@ vendor/lib64/libssc_default_listener.so
 vendor/lib64/libssc.so
 vendor/lib64/libssccalapi.so
 vendor/lib64/sensors.ssc.so
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib/libsensorcal.so
 vendor/lib/libsensorslog.so
 vendor/lib/libsns_device_mode_stub.so
@@ -786,6 +802,7 @@ vendor/lib/libssc_default_listener.so
 vendor/lib/libssc.so
 vendor/lib/libssccalapi.so
 vendor/lib/sensors.ssc.so
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Snapdragon Computer Vision Engine
 product/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so:vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
@@ -839,7 +856,9 @@ vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
 # Soter
 -app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk
+product/framework/vendor.qti.hardware.soter-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
+vendor/bin/vendor.qti.hardware.soter@1.0-provision
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
