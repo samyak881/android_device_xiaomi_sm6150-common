@@ -78,4 +78,16 @@ fi
 
 COMMON_BLOB_ROOT="${LINEAGE_ROOT}/vendor/${VENDOR}/${DEVICE_COMMON}/proprietary"
 
+#
+# Fix product path
+#
+function fix_product_path () {
+    sed -i \
+        's/\/system\/framework\//\/system\/product\/framework\//g' \
+        "$COMMON_BLOB_ROOT"/"$1"
+}
+
+fix_product_path product/etc/permissions/vendor.qti.hardware.factory.xml
+
+
 "${MY_DIR}/setup-makefiles.sh"
