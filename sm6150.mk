@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@5.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio@5.0-impl \
-    android.hardware.soundtrigger@2.2-impl \
+    android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.primary.sm6150 \
     audio.r_submix.default \
@@ -271,10 +271,6 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_sm6150
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_PACKAGES += \
